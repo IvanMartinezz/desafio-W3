@@ -8,13 +8,13 @@ Para crear las imágenes del backend y la interfaz de usuario, ejecuta el siguie
 
 Para iniciar los contenedores (base de datos, backend y ui) ejecuta el siguiente comando:
 
-    docker-compose up
+    docker-compose up -d
 
-Para iniciar la base de datos, las tablas y sus migraciones ejecuta el siguiente comando:
+Para correr las migraciones de la base de datos ejecuta el siguiente comando:
 
     docker exec -it backend npx prisma migrate dev --name ini
 
-Para iniciar la base de datos con sus datos (seeds) ejecuta el siguiente comando:
+Para hidratar la base de datos hay que correr el seed con el siguiente comando:
 
     docker exec -it backend npx prisma db seed
 
@@ -22,13 +22,13 @@ Para iniciar la base de datos con sus datos (seeds) ejecuta el siguiente comando
 
 #### Test backend
 
-Para correr los tests del backend ejecuta el siguiente comando:
+Para correr los tests del backend dentro del container ejecuta el siguiente comando::
 
     docker exec -it backend npm run test
 
 #### Test ui
 
-Para probar los tests de la ui ejecuta el siguiente comando:
+Para probar los tests de la ui dentro del container ejecuta el siguiente comando:
 
     docker exec -it ui npm run test
 
