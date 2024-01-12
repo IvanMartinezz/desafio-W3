@@ -1,5 +1,3 @@
-##Descripción
-
 ##Configuración
 
 #### Construcción de Imágenes Docker
