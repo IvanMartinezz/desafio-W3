@@ -1,4 +1,4 @@
-##Configuración
+## Configuración
 
 #### Construcción de Imágenes Docker
 
@@ -18,7 +18,7 @@ Para hidratar la base de datos hay que correr el seed con el siguiente comando:
 
     docker exec -it backend npx prisma db seed
 
-##Tests
+## Tests
 
 #### Test backend
 
