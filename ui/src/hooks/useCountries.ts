@@ -7,7 +7,7 @@ interface UseCountriesProps {
 }
 
 export const useCountries = ({ name }: UseCountriesProps) => {
-  const [data, setData] = useState<Country[] | undefined>([]);
+  const [data, setData] = useState<Country[] | undefined>(undefined);
   const [error, setError] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -16,6 +16,7 @@ export const useCountries = ({ name }: UseCountriesProps) => {
   }, []);
 
   const getCountries = async () => {
+    if (!name) return;
     try {
       setIsLoading(true);
       let aux: Country[] = [];
